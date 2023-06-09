@@ -24,7 +24,7 @@ data$age <- as.integer(data$age)
 # Convert the Gender Column
 data$gender <- ifelse(data$gender == 'cm', 'M', data$gender)
 
-# Impute missing values in the foot_length column
+# complete missing values in the foot_length column
 mean_foot_length <- mean(data$foot_length, na.rm = TRUE)
 data$foot_length[is.na(data$foot_length)] <- mean_foot_length
 data$foot_length <- round(data$foot_length, 2)
